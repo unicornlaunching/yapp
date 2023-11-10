@@ -2,8 +2,13 @@ import streamlit as st
 from youtube_transcript_api import YouTubeTranscriptApi
 
 def get_transcript(video_url):
-    # Extracts the video ID from URL
-    video_id = video_url.split('watch?v=')[1]
+    if 'youtu.be' in video_url:
+        video_id = video_url.split('.be/')[1]
+        video_id = video_id.split('?')[0]
+        video_url = f"https://www.youtube.com/watch?v={video_id}"
+    else:
+        video_id = video_url.split('watch?v=')[1]
+
     try:
         transcript = YouTubeTranscriptApi.get_transcript(video_id)
     except Exception as e:
