@@ -36,7 +36,7 @@ if st.button('Play Video from Random Time'):
     if video_url:
         video_id = video_url.split('watch?v=')[1]
         random_time = random.randint(1, 100)  # Generates a random number between 1 and 100
-        video_url_at_random_time = f'https://www.youtube.com/embed/{video_id}?start=549'
+        video_url_at_random_time = f'https://www.youtube.com/embed/{video_id}?start=548'
         st.video(video_url_at_random_time)    # This embeds the video in the Streamlit App
     else:
         st.write("Please enter a valid URL")
