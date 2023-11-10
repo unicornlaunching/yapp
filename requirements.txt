@@ -1,4 +1,4 @@
 streamlit
 youtube_transcript_api
-pytube
+pytube3
 moviepy
