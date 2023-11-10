@@ -1,5 +1,5 @@
 import streamlit as st
-from pytube import YouTube
+from pytube3 import YouTube
 from youtube_transcript_api import YouTubeTranscriptApi
 from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
 import os
